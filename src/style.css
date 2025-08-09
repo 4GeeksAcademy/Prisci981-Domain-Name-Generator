@@ -3,3 +3,9 @@
 body{
     background: white;
 }
+
+#domain-list {
+    font-family: Arial, sans-serif;
+    list-style-type: none;
+    padding: 20px;
+}
