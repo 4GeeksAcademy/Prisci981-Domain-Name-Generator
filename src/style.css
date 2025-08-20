@@ -1,11 +1,25 @@
-@import "bootstrap/dist/css/bootstrap.min.css";
-
-body{
-    background: white;
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f9;
+  color: #333;
+  text-align: center;
+  padding: 2rem;
 }
 
-#domain-list {
-    font-family: Arial, sans-serif;
-    list-style-type: none;
-    padding: 20px;
+.container {
+  max-width: 600px;
+  margin: auto;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background: white;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }

@@ -1,34 +1,24 @@
-import "bootstrap";
-import "./style.css";
+// Arrays of words
+let pronoun = ['the', 'our'];
+let adj = ['great', 'big'];
+let noun = ['jogger', 'racoon'];
+let extensions = ['.com', '.net', '.us', '.io'];
 
+// Grab the <ul> element from HTML
+let domainList = document.getElementById("domain-list");
 
-import "./assets/img/rigo-baby.jpg";
-import "./assets/img/4geeks.ico";
+// Generate all combinations
+for (let p of pronoun) {
+  for (let a of adj) {
+    for (let n of noun) {
+      for (let e of extensions) {
+        let domain = p + a + n + e;
 
-window.onload = function() {
-  //write your code here
-  console.log("Hello Rigo from the console!");
-};
-// Domain Name Generator
-// This script generates all possible domain combinations from arrays of pronouns, adjectives, and nouns
-
-let pronoun = ['the', 'our', 'my', 'your'];
-let adj = ['great', 'big', 'small', 'fast', 'smart'];
-let noun = ['jogger', 'racoon', 'developer', 'teacher', 'artist'];
-let extensions = ['.com', '.net', '.org', '.io'];
-
-console.log("🌐 Domain Name Generator");
-console.log("========================");
-
-// Generate all possible combinations
-for (let i = 0; i < pronoun.length; i++) {
-    for (let j = 0; j < adj.length; j++) {
-        for (let k = 0; k < noun.length; k++) {
-            let domain = pronoun[i] + adj[j] + noun[k] + ".com";
-            domainList.innerHTML += `<li>${domain}</li>`;
-        }
+        // Create list item
+        let li = document.createElement("li");
+        li.textContent = domain;
+        domainList.appendChild(li);
+      }
     }
+  }
 }
-
-console.log("========================");
-console.log(`Total domains generated: ${pronoun.length * adj.length * noun.length}`);
